@@ -15,14 +15,18 @@ import ast.expressions.BinaryExpression;
 import ast.expressions.Expression;
 import ast.expressions.Identifier;
 import ast.logical.statements.Statement;
+import ast.CodeLocation;
 
 public class ASTNodeFactory
 {
 	public static void initializeFromContext(ASTNode node,
 			ParserRuleContext ctx)
 	{
-		if (ctx == null)
+		if (ctx == null) {
+			node.setLocation(new CodeLocation());
+			System.out.println("Bruh");
 			return;
+		}
 		node.setLocation(CodeLocationExtractor.extractFromContext(ctx));
 		node.setCodeStr(escapeCodeStr(ParseTreeUtils.childTokenString(ctx)));
 	}
