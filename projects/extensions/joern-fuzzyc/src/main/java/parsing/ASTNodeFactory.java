@@ -24,7 +24,6 @@ public class ASTNodeFactory
 	{
 		if (ctx == null) {
 			node.setLocation(new CodeLocation());
-			System.out.println("Bruh");
 			return;
 		}
 		node.setLocation(CodeLocationExtractor.extractFromContext(ctx));

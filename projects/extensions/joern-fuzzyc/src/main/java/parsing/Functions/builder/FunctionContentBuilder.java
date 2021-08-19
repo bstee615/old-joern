@@ -240,9 +240,10 @@ public class FunctionContentBuilder extends ASTNodeBuilder
 
 	private void closeCompoundStatement()
 	{
-		stack.pop(); // remove 'CloseBlock'
+		BlockCloser closer = (BlockCloser)stack.pop(); // remove 'CloseBlock'
 		CompoundStatement compoundItem = (CompoundStatement) stack.pop();
 		nesting.consolidateBlockStarters(compoundItem);
+		compoundItem.getLocation().stopIndex = closer.getLocation().stopIndex;
 	}
 
 	// Expression handling
