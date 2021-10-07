@@ -30,7 +30,7 @@ allprojects {
 
 task joernTools(type: Exec) {
     workingDir './python/joern-tools'
-    commandLine 'python3', 'setup.py', 'install', '--user'
+    commandLine 'python', 'setup.py', 'install', '--user'
 }
 
 // Copy extensions and plugins into Octopus plugin directory
@@ -72,5 +72,5 @@ task copyToLib2(type: Copy) {
 copyToLib2.dependsOn subprojects.build
 
 build.dependsOn subprojects.build
-//build.dependsOn joernTools
+build.dependsOn joernTools
 build.dependsOn copyToLib2
