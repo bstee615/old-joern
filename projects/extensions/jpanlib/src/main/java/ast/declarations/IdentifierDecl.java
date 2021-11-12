@@ -10,7 +10,7 @@ public class IdentifierDecl extends ASTNode
 
 	public void addChild(ASTNode node)
 	{
-		if (node instanceof Identifier && this.getName() != null)
+		if (node instanceof Identifier && this.getName() == null)
 			setName((Identifier) node);
 		// TODO: This may need the same treatment as above.
 		// else if (node instanceof IdentifierDeclType && this.getType() != null)
