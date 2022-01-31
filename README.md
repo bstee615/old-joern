@@ -1,4 +1,10 @@
-joern
+# Install instructions
+
+1. Install Java 1.8.0_141 or similar
+2. Download and unzip gradle 2.0 from: https://services.gradle.org/distributions/gradle-2.0-bin.zip
+4. Run `gradle-2.0/bin/gradle build -x joernTools`
+
+# joern
 ====
 
 **This version of joern has been discontinued.**
