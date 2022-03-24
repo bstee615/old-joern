@@ -83,11 +83,4 @@ public abstract class ParserCSVOutput extends Parser
 		this.functionExporter = functionExporter;
 	}
 
-	@Override
-	protected void visitFile(Path filename)
-	{
-	    super().visitFile(filename);
-		Writer.getWriterImpl().resetLastNodeId();
-	}
-
 }
