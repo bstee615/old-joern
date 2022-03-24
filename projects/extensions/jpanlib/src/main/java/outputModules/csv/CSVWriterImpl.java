@@ -29,6 +29,11 @@ public abstract class CSVWriterImpl implements WriterImpl {
 	PrintWriter nodeWriter;
 	PrintWriter edgeWriter;
 
+	public void resetLastNodeId()
+	{
+	    lastNodeId = 0;
+	}
+
 	@Override
 	public abstract void changeOutputDir(String dirNameForFileNode);
 
