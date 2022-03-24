@@ -130,6 +130,7 @@ public abstract class CSVWriterImpl implements WriterImpl {
 	{
 		if (nodeWriter != null)
 			nodeWriter.close();
+		resetLastNodeId();
 	}
 
 	public void closeEdgeFile()
