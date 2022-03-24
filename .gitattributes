@@ -1,0 +1,2 @@
+windows-install/gradle-2.0-bin.zip filter=lfs diff=lfs merge=lfs -text
+windows-install/jdk-8u291-windows-x64.exe
