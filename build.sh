@@ -1,3 +1,3 @@
 #!/bin/sh
 
-gradle deploy -x test
+gradle build -x test -x octopusTools -x joernTools
